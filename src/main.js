@@ -3,7 +3,19 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// svg
+import '@/icons'
+
+// api
+import api from '@/api'
+Vue.prototype.api = api
+
+// base
+import base from '@/utils/base'
+
 Vue.config.productionTip = false
+
+Vue.use(base)
 
 new Vue({
   router,
