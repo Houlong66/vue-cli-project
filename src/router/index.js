@@ -4,9 +4,9 @@ import store from '@/store'
 import localStore from 'storejs'
 import nProgress from 'nprogress'
 
-import Home from './views/Home.vue'
-import About from './views/About'
-import NotFound from './views/404'
+import Home from '@/views/Home.vue'
+import About from '@/views/About'
+import NotFound from '@/views/404'
 
 Vue.use(Router)
 
