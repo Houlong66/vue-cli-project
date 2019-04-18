@@ -4,41 +4,14 @@ import store from '@/store'
 import localStore from 'storejs'
 import nProgress from 'nprogress'
 
-import Home from '@/views/Home.vue'
-import About from '@/views/About'
-import NotFound from '@/views/404'
+import routes from './routes'
 
 Vue.use(Router)
 
 const router = new Router({
   mode: 'history',
-  // base: process.env.VUE_APP_BASE_URL,
-  routes: [
-    {
-      path: '/404',
-      component: NotFound,
-    },
-    {
-      path: '/',
-      name: 'home',
-      component: Home,
-      meta: {
-        requireAuth: false
-      }
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: About,
-      meta: {
-        requireAuth: true
-      }
-    },
-    {
-      path: "*",
-      redirect: '/404'
-    }
-  ]
+  base: process.env.VUE_APP_BASE_URL,
+  routes
 })
 
 if (localStore.get('?token') && store) {

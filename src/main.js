@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// style
+import '@/style/main.scss'
+
 // svg
 import '@/icons'
 

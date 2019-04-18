@@ -28,7 +28,7 @@ export default {
         a: '123',
         b: "456"
       }
-      console.log(this.objClone(temp))
+      console.log(this.$objClone(temp))
       // api示例
       this.api.test()
     },
